@@ -1,4 +1,4 @@
-# Gerçekçi Sentetik Veri Üretimi 🚀
+# Operational Data Simulator
 
 Profesyonel iş hayatımdaki raporlama ve analiz becerilerimi ETL süreçlerine adapte etmek için bir ETL pipeline kurgularken karşılaştığım en büyük engel, verilerin gizliliğiydi. Çözüm olarak; operasyonel trendleri, saatlik yoğunlukları ve rastgelelik (noise) faktörlerini içeren bu **Sentetik Veri Simülasyonu** scriptimi geliştirdim.
 
