@@ -8,16 +8,22 @@ Bu script, bir operasyonel merkezin (Call Center, Service Desk vb.) iş akışı
 ### Bu Script Ne Yapıyor?
 Bu Python scripti; Excel tabanlı, gerçeği taklit eden 11 farklı departmana ait örnek veriyi girdi olarak kullanır. NumPy ve Pandas kütüphanelerinin gücünden faydalanarak, bu departmanlar için saatlik bazda iş hacmi ve kritik KPI metriklerini simüle eder. Belirlediğiniz tarih aralığı boyunca tamamen sentetik ama operasyonel gerçekliğe uygun veriler üretir. İşlem sonunda elde edilen df_final çıktısı, analiz veya ETL süreçlerine doğrudan aktarılmaya hazır, yapılandırılmış bir veri setidir.
 
-## Proje içeriği
+## 🛠️ Teknik Yetkinlikler & Yaklaşım
+Bu script sadece rastgele sayılar üretmez; bir operasyonun gün içindeki doğal akışını simüle eder:
 
-| Modül | İşlev | Temel Analitik Odaklar | Teknik Yetkinlikler |
+* **Zaman Serisi Simülasyonu:** Günün her saati için farklı ağırlıklar (`Weights`) kullanılarak "Morning Peak" veya "Night Shift" gibi gerçekçi iş hacmi dağılımları oluşturulur.
+* **KPI Modellemesi:** `AHT (Average Handling Time)`, `Productivity` ve `SLA` gibi kritik metrikler, birbirleriyle ilişkili ve hedef (`Target`) değerlerle karşılaştırılabilir şekilde üretilir.
+* **Stokastik Yaklaşım:** NumPy kullanılarak verilere eklenen gürültü (noise), verinin "fazla mükemmel" görünmesini engeller ve gerçek dünya analizlerine (anomaly detection vb.) uygun hale getirir.
+* **Pandas & Veri Yapılandırma:** Excel tabanlı konfigürasyon dosyalarından beslenerek, çok boyutlu DataFrame yapıları kurar.
+
+## 📊 Proje İçeriği & Analitik Odaklar
+
+Aşağıdaki tablo, bu script ile üretilen verilerin hangi analiz yetkinliklerini test etmek için kullanılabileceğini göstermektedir:
+
+| Analiz Alanı | Simüle Edilen Metrikler | Teknik Araçlar | Amaç |
 | :--- | :--- | :--- | :--- |
-| **[Modül 01](./Modul_01_Mobile_Gaming)** | **Mobile Gaming** | **DAU, Whale Analysis, Monetization, Loyalty** | `CTE`, `Date Trunc`, `Filtering` |
-| **[Modül 02](./Modul_02_Banking_Fintech)** | **Fintech & Banking** | **Fraud Detection, Risk Profiling, Limit Utilization** | `Subqueries`, `Logical CASE` |
-| **[Modül 03](./Modul_03_Supply_Chain)** | **E-Commerce & Supply Chain** | **SLA (Kargo Süresi) Analizi, Inventory Mgmt, Churn** | `Complex Joins`, `Date Diff` |
-| **[Modül 04](./Modul_04_HR_Analytics)** | **HR & Workforce** | **Turnover Rate, Salary Equity, Hierarchy Analysis** | `Window Functions`, `Self-Join` |
-| **[Modül 05](./Modul_05_Healthcare)** | **Healthcare** | **KVKK Masking, No-Show Rate, Capacity Planning** | `String Manipulation`, `Regex` |
-| **[Modül 06](./Modul_06_E-Commerce_&_CRM)** | **E-Commerce Essentials** | **Sales Performance, Customer Segmentation (RFM)** | `Aggregate Functions`, `Group By` |
-
-> **Not:** Bu verileri kullanarak oluşturduğum **End-to-End ETL & Tableau Dashboard** projemin detaylarını yakında paylaşacağım!
+| **Workforce Management** | Headcount, Shift Plan, Productivity | `Pandas`, `NumPy` | Personel verimliliği ve kapasite planlama. |
+| **Operational Excellence** | SLA %, AHT Ratio, Volume Trend | `Time-Series Modeling` | Hizmet seviyesi hedeflerinin analizi. |
+| **Performance Tracking** | Manager vs. Agent Performance | `Aggregations`, `Joins` | Hiyerarşik raporlama yapıları kurma. |
+| **ETL Ready Data** | Clean & Structured Output | `CSV/XLSX Export` | SQL, Tableau veya Power BI'a hazır veri besleme. |
 
